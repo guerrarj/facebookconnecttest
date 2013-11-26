@@ -19,7 +19,7 @@
 
   <gap:plugin name="com.phonegap.plugins.facebookconnect">
     <param name="APP_ID" value="714309198597258" />
-    <param name="APP_NAME" value="CoachApp" />
+    <param name="APP_NAME" value="thecoachapp" />
   </gap:plugin>
   
 </widget>
