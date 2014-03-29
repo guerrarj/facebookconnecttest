@@ -67,7 +67,7 @@
             	    alert('loginInit');
                     if (resp == 'connected') {
                         alert('Redirect CoachApp');
-                        me();
+                        //me();
                     } 
                 }
 
@@ -177,17 +177,12 @@
                                       try {
                                       alert('Device is ready! Make sure you set your app_id below this alert.');
                                       FB.init({ appId: "714309198597258", nativeInterface: CDV.FB, useCachedDialogs: false });
+                                      fisrtLogin();
                                       document.getElementById('data').innerHTML = "";
                                       } catch (e) {
                                       alert(e);
                                       }
                                       }, false);
-
-            document.addEventListener("DOMContentLoaded", function () {
-                alert('Entrou');
-                //fisrtLogin();
-                login();
-            });
             
             
             </script>
