@@ -119,14 +119,14 @@
                          );
             }
 
-            var resp;
+            //var resp;
             function fisrtLogin() {
-                alert('fisrtLogin');
                 FB.login(
                          function (response) {
                              if (response.session) {
                                  resp = response.session;
                                  alert(resp);
+                                 alert('fisrtLogin');
                                  loginInit();
                              } else {
                                  alert('not logged in');
