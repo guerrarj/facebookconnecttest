@@ -64,6 +64,7 @@
             }
 
             function loginInit() {
+            	    alert('loginInit');
                     if (resp == 'connected') {
                         alert('Redirect CoachApp');
                         me();
@@ -120,11 +121,12 @@
 
             var resp;
             function fisrtLogin() {
+                alert('fisrtLogin');
                 FB.login(
                          function (response) {
                              if (response.session) {
-                                 //alert('logged in');
                                  resp = response.session;
+                                 alert(resp);
                                  loginInit();
                              } else {
                                  //alert('not logged in');
