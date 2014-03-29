@@ -8,6 +8,7 @@
 		<!--<button onclick="getSession()">Get session</button>-->
 		<button onclick="getLoginStatus()">Get login</button>
 		<button onclick="logout()">Logout</button>
+        <button onclick="post()">Logout</button>
 		<!--button onclick="facebookWallPost()">facebookWallPost</!--button-->
 		<!--button onclick="publishStoryFriend()">friendstory</!--button-->
         
@@ -118,6 +119,24 @@
                  },
                  { scope: "email,publish_actions" }
                  );
+    }
+
+
+    function post() {
+        var privacy = { "value": "SELF" };
+        //var privacy = { "value": "CUSTOM", "friends": "SOME_FRIENDS", "allow": "{UID}" };
+        var wallPost = {
+            message: "Escalação...",
+            picture: "http://1.bp.blogspot.com/-HSTbOrI_Qh0/Tn_IcdY9OMI/AAAAAAAAAdw/nk9XrD0kg9M/s1600/FC-Bar%25C3%25A7a.jpg",
+            privacy: privacy
+        };
+        FB.api('/me/feed', 'post', wallPost, function (response) {
+            if (!response || response.error) {
+                alert('Error occured');
+            } else {
+                alert('Post ID: ' + response);
+            }
+        });
     }
 
     var resp;
