@@ -56,7 +56,7 @@
     function getLoginStatus() {
         FB.getLoginStatus(function (response) {
             if (response.status == 'connected') {
-                alert('logged in');
+                //alert('logged in');
             } else {
                 alert('not logged in');
                 fisrtLogin();
@@ -65,7 +65,7 @@
     }
 
     function loginInit() {
-        alert('loginInit');
+        //alert('loginInit');
         if (resp == 'connected') {
             alert('Redirect CoachApp');
             //me();
@@ -126,8 +126,8 @@
                  function (response) {
                      if (response.session) {
                          resp = response.session;
-                         alert(resp);
-                         alert('fisrtLogin');
+                         //alert(resp);
+                         //alert('fisrtLogin');
                          loginInit();
                      } else {
                          alert('not logged in');
@@ -176,7 +176,7 @@
 
     document.addEventListener('deviceready', function () {
         try {
-            alert('Device is ready! Make sure you set your app_id below this alert.');
+            //alert('Device is ready! Make sure you set your app_id below this alert.');
             FB.init({ appId: "714309198597258", nativeInterface: CDV.FB, useCachedDialogs: false });
             getLoginStatus();
             document.getElementById('data').innerHTML = "";
