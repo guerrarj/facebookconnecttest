@@ -64,13 +64,11 @@
             }
 
             function loginInit() {
-                FB.getLoginStatus(function (response) {
-                    fisrtLogin();
                     if (resp == 'connected') {
                         alert('Redirect CoachApp');
+                        me();
                     } 
-                });
-            }
+                }
 
             var friendIDs = [];
 			var fdata;
@@ -127,6 +125,7 @@
                              if (response.session) {
                                  //alert('logged in');
                                  resp = response.session;
+                                 loginInit();
                              } else {
                                  //alert('not logged in');
                              }
@@ -184,7 +183,7 @@
 
             document.addEventListener("DOMContentLoaded", function () {
                 alert('Entrou');
-                loginInit();
+                fisrtLogin();
             });
             
             
