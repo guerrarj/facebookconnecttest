@@ -21,6 +21,5 @@
     <param name="APP_ID" value="714309198597258" />
     <param name="APP_NAME" value="thecoachapp" />
   </gap:plugin>
-  <gap:plugin name="com.jamiestarke.webviewdebug" version="1.0.8" />
   
 </widget>
