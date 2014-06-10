@@ -22,4 +22,6 @@
     <param name="APP_NAME" value="thecoachapp" />
   </gap:plugin>
   
+  <gap:plugin name="org.devgeeks.canvas2imageplugin" version="0.5.1" />
+  
 </widget>
